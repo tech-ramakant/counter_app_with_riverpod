@@ -4,7 +4,7 @@ This repository contains the source code for the tutorial **[State Management in
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features✨)
+- [Features](#features-✨)
 - [Getting Started](#getting started)
 - [Dependencies](#dependencies)
 - [Code Overview](#code overview🔍)
