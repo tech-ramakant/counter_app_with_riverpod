@@ -1,6 +1,6 @@
 # Riverpod Counter App 🚀
 
-This repository contains the source code for the tutorial **[State Management in Flutter with Provider!](https://medium.com/@tech.ramakanttiwari/state-management-in-flutter-with-provider-89fc16ae7700)** published on Medium. This code demonstrates how to manage state effectively in Flutter apps using the Provider package, making complex state management a breeze.
+This repository contains the source code for the tutorial **[State Management in Flutter: Unleashing the Power of Riverpod!](https://medium.com/@tech.ramakant/state-management-in-flutter-unleashing-the-power-of-riverpod-04069a6baf6b)** published on Medium. This code demonstrates how to manage state effectively in Flutter apps using the Riverpod package, making complex state management a breeze.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -25,8 +25,8 @@ Welcome to the **Riverpod Counter App**! This is a simple Flutter application de
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/tech-ramakant/riverpod-counter-app.git
-    cd riverpod-counter-app
+    git clone https://github.com/tech-ramakant/counter_app_with_riverpod.git
+    cd counter_app_with_riverpod
     ```
 
 2. Install the required dependencies:
