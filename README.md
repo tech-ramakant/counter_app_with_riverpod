@@ -4,13 +4,13 @@ This repository contains the source code for the tutorial **[State Management in
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features-✨)
-- [Getting Started](#getting-started)
+- [Features](#features✨)
+- [Getting Started](#getting started)
 - [Dependencies](#dependencies)
-- [Code Overview](#code-overview-🔍)
+- [Code Overview](#code overview🔍)
 - [License](#license-📝)
-- [Contribution Guidelines](#contribution-guidelines-🤝)
-- [Contact](#contact-📬)
+- [Contribution Guidelines](#contribution guidelines🤝)
+- [Contact](#contact📬)
 
 ## Introduction
 
