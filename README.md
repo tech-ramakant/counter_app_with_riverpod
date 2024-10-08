@@ -4,19 +4,19 @@ This repository contains the source code for the tutorial **[State Management in
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features-✨)
+- [Features](#features)
 - [Getting Started](#getting started)
 - [Dependencies](#dependencies)
-- [Code Overview](#code overview🔍)
-- [License](#license-📝)
-- [Contribution Guidelines](#contribution guidelines🤝)
-- [Contact](#contact📬)
+- [Code Overview](#code overview)
+- [License](#license)
+- [Contribution Guidelines](#contribution guidelines)
+- [Contact](#contact)
 
 ## Introduction
 
 Welcome to the **Riverpod Counter App**! This is a simple Flutter application demonstrating state management using **Riverpod**, an alternative to the popular **Provider** package for managing state in Flutter apps.
 
-## Features ✨
+## Features
 - 🛠 Built with **Flutter** and **Riverpod**.
 - 🚀 Simple **counter functionality** to demonstrate state management.
 - 👀 Clean separation of logic and UI using `StateProvider` and `ConsumerWidget`.
@@ -55,7 +55,7 @@ dependencies:
   flutter_riverpod: ^2.0.0
 ```
 
-## Code Overview 🔍
+## Code Overview
 
 State Management
 The state is managed by Riverpod's StateProvider. This ensures that the app remains performant and easy to manage, regardless of its size and complexity.
@@ -90,12 +90,12 @@ This line allows the widget to reactively display the current state of the count
 
 This method increments the counter by updating the provider's state.
 
-## License 📝
+## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute as needed.
 
 For more details, check out the LICENSE file.
 
-## Contribution Guidelines 🤝
+## Contribution Guidelines
 Contributions are always welcome! If you'd like to contribute, feel free to submit a pull request or open an issue.
 
 Contact 📬
