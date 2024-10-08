@@ -98,7 +98,7 @@ For more details, check out the LICENSE file.
 ## Contribution Guidelines
 Contributions are always welcome! If you'd like to contribute, feel free to submit a pull request or open an issue.
 
-## Contact 📬
+## Contact
 - Email: [tech.ramakanttiwari@gmail.com](mailto:tech.ramakanttiwari@gmail.com)
 - Medium: [@tech.ramakant](https://medium.com/@tech.ramakant)
 - LinkedIn: [@tech-ramakant](https://www.linkedin.com/in/ramakant-tiwari-593479128)
