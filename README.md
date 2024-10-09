@@ -1,7 +1,6 @@
-# Cubit Counter App 🚀
+# Riverpod Counter App 🚀
 
-This repository contains the source code for the tutorial **[Bloc Too Tough? Start with Cubit for a Smoother Ride!](https://medium.com/@tech.ramakant/bloc-too-tough-start-with-cubit-for-a-smoother-ride)** published on Medium. It demonstrates how to convert the default Flutter counter app to use **Cubit** state management, making state handling smoother and more scalable.
-
+This repository contains the source code for the tutorial **[State Management in Flutter: Unleashing the Power of Riverpod!](https://medium.com/@tech.ramakant/state-management-in-flutter-unleashing-the-power-of-riverpod-04069a6baf6b)** published on Medium. This code demonstrates how to manage state effectively in Flutter apps using the Riverpod package, making complex state management a breeze.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -13,19 +12,21 @@ This repository contains the source code for the tutorial **[Bloc Too Tough? Sta
 - [Contribution Guidelines](#contribution-guidelines)
 - [Contact](#contact)
 
-Welcome to the **Cubit Counter App**! This project showcases how you can manage state in a Flutter application using **Cubit** from the **Bloc** package, a lightweight alternative to `setState()` that allows for better state management without the complexity of Bloc.
+## Introduction
+
+Welcome to the **Riverpod Counter App**! This is a simple Flutter application demonstrating state management using **Riverpod**, an alternative to the popular **Provider** package for managing state in Flutter apps.
 
 ## Features
-- 🛠 Built with **Flutter** and **Cubit**.
-- 🚀 Easy to understand **counter functionality** demonstrating how Cubit works.
-- 📈 Scalable state management compared to `setState()`.
+- 🛠 Built with **Flutter** and **Riverpod**.
+- 🚀 Simple **counter functionality** to demonstrate state management.
+- 👀 Clean separation of logic and UI using `StateProvider` and `ConsumerWidget`.
 
 ## Getting Started
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/tech-ramakant/counter_app_with_cubit.git
-    cd counter_app_with_cubit
+    git clone https://github.com/tech-ramakant/counter_app_with_riverpod.git
+    cd counter_app_with_riverpod
     ```
 
 2. Install the required dependencies:
@@ -42,71 +43,52 @@ Welcome to the **Cubit Counter App**! This project showcases how you can manage 
 
 This app uses the following packages:
 
-- **[flutter_bloc](https://pub.dev/packages/flutter_bloc)**: A predictable state management library that helps implement the Cubit pattern.
+- **[flutter_riverpod](https://pub.dev/packages/flutter_riverpod)**: The state management solution powering this app.
 - **flutter**: The core framework for building natively compiled applications for mobile, web, and desktop.
 
 To add these dependencies, ensure you have the following in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-   flutter:
-      sdk: flutter
-   flutter_bloc: ^8.0.0
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.0.0
 ```
 
 ## Code Overview
 
-Here’s what we changed from the default Flutter counter app:
+State Management
+The state is managed by Riverpod's StateProvider. This ensures that the app remains performant and easy to manage, regardless of its size and complexity.
 
-1. CounterCubit
-   We created a CounterCubit class that extends Cubit<int>. This class contains logic to manage the counter state:
+Here’s a quick breakdown of the main components:
 
+1. counterProvider:
 ```dart
-class CounterCubit extends Cubit<int> {
-   CounterCubit() : super(0);
-
-   void increment() => emit(state + 1);
-}
+final counterProvider = StateProvider<int>((ref) => 0);
 ```
 
-2. BlocProvider
-   We wrap the MyApp widget with BlocProvider, providing the CounterCubit to the entire app:
+A simple state provider that initializes the counter to 0 and can be updated.
 
+2. ConsumerWidget:
 ```dart
-class MyApp extends StatelessWidget {
-   @override
-   Widget build(BuildContext context) {
-      return BlocProvider(
-         create: (_) => CounterCubit(),
-         child: MaterialApp(
-            home: MyHomePage(),
-         ),
-      );
-   }
-}
+class CounterApp extends ConsumerWidget {
 ```
 
-3. BlocBuilder
-   We replaced the setState() logic with a BlocBuilder to automatically rebuild the UI when the state changes:
+The ConsumerWidget allows the UI to listen for changes in the counterProvider and update accordingly.
 
+3. UI Updates:
 ```dart
-   BlocBuilder<CounterCubit, int>(
-    builder: (context, count) {
-     return Text('$count');
-    },
-  )
+   final count = ref.watch(counterProvider);
 ```
 
-4. Increment Logic
-   The increment button now directly interacts with the Cubit to update the state:
+This line allows the widget to reactively display the current state of the counter.
 
+4. Updating State:
 ```dart
-   FloatingActionButton(
-    onPressed: () => context.read<CounterCubit>().increment(),
-    tooltip: 'Increment',
-    child: Icon(Icons.add),
-  )
+   ref.read(counterProvider.notifier).state++;
 ```
+
+This method increments the counter by updating the provider's state.
 
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute as needed.
